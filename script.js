@@ -47,6 +47,8 @@ document.addEventListener("DOMContentLoaded", function(){
       createElementProper(musicDataBaseHappy[i]);
     }
 
+    outPutParagraph.innerText = "K-Pop Songs that Make Me Happy";
+
   })
 
   sadButtonElement.addEventListener("click", function(){
@@ -58,6 +60,8 @@ document.addEventListener("DOMContentLoaded", function(){
     for (var i = 0; i < musicDataBaseSad.length; i++) {
       createElementProper(musicDataBaseSad[i]);
     }
+
+    outPutParagraph.innerText = "K-Pop Songs that Make Me Sad";
 
   })
 
@@ -71,6 +75,8 @@ document.addEventListener("DOMContentLoaded", function(){
       createElementProper(musicDataBaseCool[i]);
     }
 
+    outPutParagraph.innerText = "K-Pop Songs that Make Me Cool";
+
   })
 
 
@@ -79,11 +85,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
 let musicDataBaseHappy = [
   {
-    "songTitle" : "Save You Save Me",
+    "songTitle" : "Butterfly",
     "artist" : ["WJSN", "Cosmic Girls", "Starship Entertainment", "Yuehua Entertainment"],
     "year" : "2018",
-    "artWork" : "WJSN_SaveYouSaveMe.jpg",
-    "description" : "This is the description",
+    "artWork" : "Cosmic_Girls_Neverland.png",
+    "description" : "WJSN, also commonly known as the Cosmic Girls, released their album \"Neverland\" in June of 2019.",
     "color" : "rgba(18, 11, 92, 0.5)"
   },
   {
@@ -246,7 +252,9 @@ function createElementProper(incomingJSON) {
   newContentDesc.classList.add('contentDescription');
   newContentDesc.style.display = "flex";
   newContentDesc.style.width = "600px";
+  newContentDesc.style.height = "96px";
   newContentDesc.style.justifyContent = "center";
+  newContentDesc.style.overflowY = "auto";
   newContentDesc.innerText = incomingJSON['description'];
   //add to right side
   newContentRightSide.appendChild(newContentDesc);
