@@ -1,7 +1,9 @@
 let outputElement;
 let outPutParagraph;
 let contentGridElement;
-
+let happyButtonElement;
+let sadButtonElement;
+let coolButtonElement;
 /* this is the old way of doing things, but good to know
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -31,14 +33,51 @@ document.addEventListener("DOMContentLoaded", function(){
   outPutParagraph = document.querySelector("#outPutParagraph");
   contentGridElement = document.querySelector("#contentGrid");
 
-  for (var i = 0; i < musicDataBaseSad.length; i++) {
-    createElementProper(musicDataBaseSad[i]);
-  }
+  happyButtonElement = document.querySelector('#happy-button');
+  sadButtonElement = document.querySelector('#sad-button');
+  coolButtonElement = document.querySelector('#cool-button');
+
+  happyButtonElement.addEventListener("click", function(){
+
+    while(contentGridElement.hasChildNodes()){
+      contentGridElement.removeChild(contentGridElement.firstChild);
+    }
+
+    for (var i = 0; i < musicDataBaseHappy.length; i++) {
+      createElementProper(musicDataBaseHappy[i]);
+    }
+
+  })
+
+  sadButtonElement.addEventListener("click", function(){
+
+    while(contentGridElement.hasChildNodes()){
+      contentGridElement.removeChild(contentGridElement.firstChild);
+    }
+
+    for (var i = 0; i < musicDataBaseSad.length; i++) {
+      createElementProper(musicDataBaseSad[i]);
+    }
+
+  })
+
+  coolButtonElement.addEventListener("click", function(){
+
+    while(contentGridElement.hasChildNodes()){
+      contentGridElement.removeChild(contentGridElement.firstChild);
+    }
+
+    for (var i = 0; i < musicDataBaseCool.length; i++) {
+      createElementProper(musicDataBaseCool[i]);
+    }
+
+  })
+
 
 })
 
 
-let musicDataBaseSad = [
+let musicDataBaseHappy = [
   {
     "songTitle" : "Save You Save Me",
     "artist" : ["WJSN", "Cosmic Girls", "Starship Entertainment", "Yuehua Entertainment"],
@@ -97,9 +136,32 @@ let musicDataBaseSad = [
   }
 ];
 
+let musicDataBaseSad = [
+  {
+    "songTitle" : "SAD SONGS ACTIVATED",
+    "artist" : ["WJSN", "Cosmic Girls", "Starship Entertainment", "Yuehua Entertainment"],
+    "year" : "2018",
+    "artWork" : "WJSN_SaveYouSaveMe.jpg",
+    "description" : "This is the description",
+    "color" : "rgba(18, 11, 92, 0.5)"
+  }
+];
+
+let musicDataBaseCool = [
+  {
+    "songTitle" : "COOL SONGS ACTIVATED",
+    "artist" : ["WJSN", "Cosmic Girls", "Starship Entertainment", "Yuehua Entertainment"],
+    "year" : "2018",
+    "artWork" : "WJSN_SaveYouSaveMe.jpg",
+    "description" : "This is the description",
+    "color" : "rgba(18, 11, 92, 0.5)"
+  }
+];
 
 
 function createElementProper(incomingJSON) {
+
+
 
   //create card for the whole item
   let newContentElement = document.createElement("DIV");
@@ -197,7 +259,7 @@ function createElementProper(incomingJSON) {
   //add image to left side
   newContentLeftSide.appendChild(newImage);
 
-  //add whole item box to the page
+  //add whole item box to the list element
   contentGridElement.appendChild(newContentElement);
 
 
