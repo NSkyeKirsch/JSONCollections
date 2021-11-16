@@ -115,7 +115,7 @@ let musicDataBaseHappy = [
     "artist" : ["LUCY", "MYSTIC Story Entertainment"],
     "year" : "2020",
     "artWork" : "LUCY_Jogging.jpg",
-    "description" : "This is the 4th description",
+    "description" : "This is the 5th description",
     "color" : "rgba(18, 11, 92, 0.5)"
   },
   {
@@ -123,7 +123,7 @@ let musicDataBaseHappy = [
     "artist" : ["SNSD", "Girl's Generation", "SM Entertainment"],
     "year" : "2013",
     "artWork" : "SNSD_IGotABoy.jpg",
-    "description" : "This is the 4th description",
+    "description" : "This is the 6th description",
     "color" : "#8782bd"
   },
   {
@@ -131,7 +131,7 @@ let musicDataBaseHappy = [
     "artist" : ["SHINee", "SM Entertainment"],
     "year" : "2016",
     "artWork" : "SHINee_WorldFourConcert.jpg",
-    "description" : "This is the 4th description",
+    "description" : "This is the 7th description",
     "color" : "rgba(18, 11, 92, 0.5)"
   }
 ];
