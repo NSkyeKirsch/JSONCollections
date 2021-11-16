@@ -33,7 +33,7 @@ h3 {
 
 #contentGrid {
   display: grid;
-  grid-row-gap: 8vmin;
+  grid-row-gap: 9vmin;
   font-size: 1.5rem;
   margin-left: 20vh;
   margin-right: 30vh;

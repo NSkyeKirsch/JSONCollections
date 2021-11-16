@@ -40,36 +40,60 @@ document.addEventListener("DOMContentLoaded", function(){
 
 let musicDataBaseSad = [
   {
-    "songTitle" : "song name",
-    "artist" : ["The Band", "The Feature"],
-    "year" : "1996",
-    "artWork" : "https://picsum.photos/200",
+    "songTitle" : "Save You Save Me",
+    "artist" : ["WJSN", "Cosmic Girls", "Starship Entertainment", "Yuehua Entertainment"],
+    "year" : "2018",
+    "artWork" : "WJSN_SaveYouSaveMe.jpg",
     "description" : "This is the description",
     "color" : "rgba(18, 11, 92, 0.5)"
   },
   {
-    "songTitle" : "song name 2",
-    "artist" : ["The guy"],
-    "year" : "2004",
-    "artWork" : "https://picsum.photos/200",
+    "songTitle" : "Woowa",
+    "artist" : ["DIA", "MBK Entertainment", "PocketDol Studio"],
+    "year" : "2019",
+    "artWork" : "DIA_Woowa.jpg",
     "description" : "This is the 2nd description",
     "color" : "#8782bd"
   },
   {
-    "songTitle" : "song name 3",
-    "artist" : ["The Magic", "The Mystery", "The Tour"],
-    "year" : "1986",
-    "artWork" : "https://picsum.photos/200",
+    "songTitle" : "Hi High",
+    "artist" : ["LOONA", "BlockBerryCreative"],
+    "year" : "2018",
+    "artWork" : "Loona_HiHigh.png",
     "description" : "This is the 3rd description",
     "color" : "rgba(18, 11, 92, 0.5)"
   },
   {
-    "songTitle" : "song name 4",
-    "artist" : ["The Magic", "The Mystery", "The Tour"],
-    "year" : "1986",
-    "artWork" : "https://picsum.photos/200",
+    "songTitle" : "Dreams Come True",
+    "artist" : ["SES", "SM Entertainment"],
+    "year" : "1998",
+    "artWork" : "SES_DreamsComeTrue.jpg",
     "description" : "This is the 4th description",
     "color" : "#8782bd"
+  },
+  {
+    "songTitle" : "Jogging",
+    "artist" : ["LUCY", "MYSTIC Story Entertainment"],
+    "year" : "2020",
+    "artWork" : "LUCY_Jogging.jpg",
+    "description" : "This is the 4th description",
+    "color" : "rgba(18, 11, 92, 0.5)"
+  },
+  {
+    "songTitle" : "I GOT A BOY",
+    "artist" : ["SNSD", "Girl's Generation", "SM Entertainment"],
+    "year" : "2013",
+    "artWork" : "SNSD_IGotABoy.jpg",
+    "description" : "This is the 4th description",
+    "color" : "#8782bd"
+  },
+  {
+    "songTitle" : "Sherlock",
+    "artist" : ["SHINee", "SM Entertainment"],
+    "year" : "2016",
+    "artWork" : "SHINee_WorldFourConcert.jpg",
+    "description" : "This is the 4th description",
+    "color" : "rgba(18, 11, 92, 0.5)"
   }
 ];
 
@@ -169,6 +193,8 @@ function createElementProper(incomingJSON) {
   let newImage = document.createElement("IMG");
   newImage.classList.add("leftSideImage");
   newImage.src = incomingJSON['artWork'];
+  newImage.style.width = "200px";
+  //add image to left side
   newContentLeftSide.appendChild(newImage);
 
   //add whole item box to the page
