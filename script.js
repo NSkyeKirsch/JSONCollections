@@ -45,7 +45,7 @@ let musicDataBaseSad = [
     "year" : "1996",
     "artWork" : "https://picsum.photos/200",
     "description" : "This is the description",
-    "color" : "black"
+    "color" : "rgba(18, 11, 92, 0.5)"
   },
   {
     "songTitle" : "song name 2",
@@ -53,7 +53,23 @@ let musicDataBaseSad = [
     "year" : "2004",
     "artWork" : "https://picsum.photos/200",
     "description" : "This is the 2nd description",
-    "color" : "blue"
+    "color" : "#8782bd"
+  },
+  {
+    "songTitle" : "song name 3",
+    "artist" : ["The Magic", "The Mystery", "The Tour"],
+    "year" : "1986",
+    "artWork" : "https://picsum.photos/200",
+    "description" : "This is the 3rd description",
+    "color" : "rgba(18, 11, 92, 0.5)"
+  },
+  {
+    "songTitle" : "song name 4",
+    "artist" : ["The Magic", "The Mystery", "The Tour"],
+    "year" : "1986",
+    "artWork" : "https://picsum.photos/200",
+    "description" : "This is the 4th description",
+    "color" : "#8782bd"
   }
 ];
 
@@ -65,13 +81,16 @@ function createElementProper(incomingJSON) {
   let newContentElement = document.createElement("DIV");
   newContentElement.classList.add('contentItemBox');
   newContentElement.style.backgroundColor = incomingJSON['color'];
-  newContentElement.style.padding = "20px 59px 20px 50px",
+  newContentElement.style.padding = "20px 50px 20px 50px",
   newContentElement.style.display = "flex";
+  newContentElement.style.borderRadius = "24px";
+
+  newContentElement.style.boxShadow =  "5px 5px 20px #231e59, -8px -8px 30px #c4c1e6";
 
   //create box for left inside
   let newContentLeftSide = document.createElement("DIV");
   newContentLeftSide.classList.add('contentLeftSide');
-  newContentLeftSide.style.paddingRight = "50px";
+  newContentLeftSide.style.paddingRight = "25px";
   //add to item box
   newContentElement.appendChild(newContentLeftSide);
 
@@ -85,8 +104,13 @@ function createElementProper(incomingJSON) {
   newContentElement.appendChild(newContentRightSide);
 
   //create Headline
-  let newContentHeading = document.createElement("P");
+  let newContentHeading = document.createElement("DIV");
   newContentHeading.classList.add('contentTitle');
+  newContentHeading.style.display = "flex";
+  newContentHeading.style.width = "500px";
+  newContentHeading.style.fontSize = "xx-large";
+  newContentHeading.style.justifyContent = "center";
+  newContentHeading.style.padding = "20px";
   newContentHeading.innerText = incomingJSON['songTitle'];
   //add headline to the right side
   newContentRightSide.appendChild(newContentHeading);
@@ -134,6 +158,9 @@ function createElementProper(incomingJSON) {
   //create description box for the right side
   let newContentDesc = document.createElement("DIV");
   newContentDesc.classList.add('contentDescription');
+  newContentDesc.style.display = "flex";
+  newContentDesc.style.width = "600px";
+  newContentDesc.style.justifyContent = "center";
   newContentDesc.innerText = incomingJSON['description'];
   //add to right side
   newContentRightSide.appendChild(newContentDesc);

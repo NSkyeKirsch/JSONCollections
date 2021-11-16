@@ -3,9 +3,10 @@
 body {
   margin: 5vw 10vw 0px 10vw;
   padding: 0px;
-  background-color: #eee;
+  background-color: #8782bd;
   color: #d08e83;
   font-family: 'Overpass Mono', monospace, sans-serif;
+  text-shadow: 1px 1px black;
   font-size: 2rem;
 }
 
@@ -20,9 +21,10 @@ h3 {
 }
 
 #outputElement {
-  padding: 2vmin;
+  padding: 1vmin;
   background-color: rgba(37, 25, 4, 0.39);
   color: #333;
+  font-size: 64px;
 }
 
 #outputParagraph {
@@ -31,9 +33,10 @@ h3 {
 
 #contentGrid {
   display: grid;
-  grid-column-gap: 1vmin;
-  grid-row-gap: 1vmin;
-  background-color: rgba(37, 25, 4, 0.39);
-  padding: 2vmin;
+  grid-row-gap: 8vmin;
   font-size: 1.5rem;
+  margin-left: 20vh;
+  margin-right: 30vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
 }
