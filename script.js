@@ -262,7 +262,7 @@ let musicDataBaseOthers = [
     "artist" : ["SHINee", "SM Entertainment"],
     "year" : "2008",
     "artWork" : "SHINee_Replay.jpg",
-    "description" : "This song has been on the 'favorites' list of almost every K-Pop fan since 2008. Its a little outdated sounding now, but still endearing.",
+    "description" : "This song has been on the 'favorites' list of almost every K-Pop fan since 2008. It's a little outdated sounding now, but still endearing.",
     "color" : "#8782bd"
   },
   {
